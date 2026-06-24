@@ -3,20 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday Nurse 💙</title>
+<title>Happy Birthday My Favorite Nurse 💙</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 <style>
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Segoe UI', sans-serif;
+    font-family:'Segoe UI',sans-serif;
 }
 
 body{
-    background:linear-gradient(to bottom,#eaf7ff,#ffffff);
-    color:#2c3e50;
+    background:linear-gradient(180deg,#07111f,#102a43);
+    color:white;
     text-align:center;
+    overflow-x:hidden;
+}
+
+section{
+    padding:50px 20px;
 }
 
 .hero{
@@ -29,159 +38,365 @@ body{
 }
 
 .profile{
-    width:180px;
-    height:180px;
+    width:190px;
+    height:190px;
     border-radius:50%;
     object-fit:cover;
-    border:6px solid white;
-    box-shadow:0 10px 25px rgba(0,0,0,0.1);
-    margin-bottom:20px;
+    border:5px solid #4da6ff;
+    box-shadow:0 0 30px #4da6ff;
 }
 
 .heartbeat{
     font-size:45px;
+    margin:25px;
     animation:beat 1s infinite;
 }
 
 @keyframes beat{
-    0%,100%{transform:scale(1);}
-    50%{transform:scale(1.2);}
+    0%,100%{
+        transform:scale(1);
+    }
+    50%{
+        transform:scale(1.2);
+    }
 }
 
-h1{
-    color:#4a90e2;
-    margin:15px 0;
-    font-size:2rem;
+h1,h2{
+    color:#7ec8ff;
+    margin-bottom:20px;
 }
 
-p{
-    max-width:320px;
-    line-height:1.7;
-    color:#555;
+#typing{
+    max-width:340px;
+    line-height:1.8;
+    color:#d9e8f5;
 }
 
-button{
+#countdown{
+    margin-top:25px;
+    font-size:22px;
+    color:#7ec8ff;
+    font-weight:bold;
+}
+
+.btn{
     margin-top:30px;
-    padding:15px 30px;
+    padding:16px 35px;
     border:none;
-    border-radius:40px;
-    background:#4a90e2;
+    border-radius:50px;
+    background:#2196f3;
     color:white;
-    font-size:1rem;
+    font-size:17px;
     cursor:pointer;
-    box-shadow:0 8px 20px rgba(74,144,226,0.3);
-}
-
-.cards{
-    padding:40px 20px;
-}
-
-.cards h2{
-    margin-bottom:25px;
-    color:#4a90e2;
+    box-shadow:0 0 25px rgba(33,150,243,.5);
 }
 
 .card{
-    background:white;
-    padding:25px;
-    margin-bottom:15px;
-    border-radius:25px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.08);
-}
-
-.message{
-    padding:20px;
-}
-
-.box{
-    background:white;
+    background:#11253d;
+    margin-bottom:20px;
     padding:30px;
     border-radius:25px;
-    margin:20px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    box-shadow:0 0 20px rgba(77,166,255,.15);
+}
+
+.gallery{
+    display:flex;
+    gap:15px;
+    overflow-x:auto;
+    padding-bottom:15px;
+}
+
+.gallery::-webkit-scrollbar{
+    display:none;
+}
+
+.gallery img{
+    width:190px;
+    height:260px;
+    object-fit:cover;
+    border-radius:20px;
+    flex-shrink:0;
+    box-shadow:0 0 20px rgba(77,166,255,.4);
+}
+
+.letter{
+    background:#11253d;
+    padding:30px;
+    border-radius:25px;
+    text-align:left;
+    line-height:2;
+    box-shadow:0 0 20px rgba(77,166,255,.15);
 }
 
 footer{
     padding:40px;
-    color:#4a90e2;
-    font-size:14px;
+    color:#7ec8ff;
 }
+
+.heart{
+    position:fixed;
+    color:#ff5e7d;
+    animation:fly 6s linear infinite;
+    z-index:999;
+}
+
+@keyframes fly{
+    from{
+        transform:translateY(100vh);
+        opacity:1;
+    }
+    to{
+        transform:translateY(-100px);
+        opacity:0;
+    }
+}
+
 </style>
 </head>
 
 <body>
 
+<audio autoplay loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
 <section class="hero">
 
-    <!-- Bddli photo.jpg b tswira dyalha -->
-    <img src="IMG-20250906-WA0149.jpg" class="profile">
+<img src="image.jpg" class="profile">
 
-    <div class="heartbeat">🩺❤️</div>
+<div class="heartbeat">
+<i class="fa-solid fa-stethoscope"></i> ❤️
+</div>
 
-    <h1>Happy Birthday My Favorite Nurse 💙</h1>
+<h1>
+Happy Birthday My Favorite Nurse 💙
+</h1>
 
-    <p>
-        Every day, you heal others with kindness and love.
-        Today is your day to smile, shine and be celebrated.
-    </p>
+<p id="typing"></p>
 
-    <button onclick="surprise()">
-        🎁 Open My Surprise
-    </button>
+<div id="countdown"></div>
 
-</section>
-
-<section class="cards">
-
-    <h2>Why You're Amazing ✨</h2>
-
-    <div class="card">
-        🩺 Caring Heart <br><br>
-        You comfort people with love and kindness.
-    </div>
-
-    <div class="card">
-        💉 Strong Soul <br><br>
-        You remain strong even during difficult days.
-    </div>
-
-    <div class="card">
-        ❤️ Beautiful Person <br><br>
-        Your kindness heals hearts before medicine does.
-    </div>
+<button class="btn" onclick="surprise()">
+🎁 Open My Surprise
+</button>
 
 </section>
 
-<section class="message">
+<section>
 
-    <div class="box">
-        💌<br><br>
+<h2>✨ Why You're Amazing</h2>
 
-        May you always be my healer, my comfort,
-        and the beautiful soul that brightens every room.
+<div class="card">
+🩺 Caring Heart
+<br><br>
+You comfort people with love and kindness.
+</div>
 
-        <br><br>
+<div class="card">
+💉 Strong Soul
+<br><br>
+You remain strong even during difficult days.
+</div>
 
-        Happy Birthday, my beautiful nurse. 💙🩺🎂
-    </div>
+<div class="card">
+❤️ Beautiful Person
+<br><br>
+Your kindness heals hearts before medicine does.
+</div>
+
+</section>
+
+<section>
+
+<h2>📸 Our Memories</h2>
+
+<div class="gallery">
+
+<img src="Premier_photo.jpg">
+<img src="Photo_home.jpg">
+<img src="Photo_home_2.jpg">
+<img src="Photo_motor.jpg">
+<img src="Photo_plage.jpg">
+<img src="Photo_foot.jpg">
+
+</div>
+
+</section>
+
+<section>
+
+<h2>💌 A Letter For You</h2>
+
+<div class="letter">
+
+My dearest friend,
+
+<br><br>
+
+You spend your days healing others,
+comforting them and bringing light to
+people in their hardest moments.
+
+<br><br>
+
+I hope this new year of your life brings
+you the same love, happiness and care
+that you give to everyone around you.
+
+<br><br>
+
+May you always be my healer,
+my comfort and the beautiful soul
+that brightens every room.
+
+<br><br>
+
+Happy Birthday,
+my beautiful nurse. 💙🩺🎂
+
+<br><br>
+
+With love,
+<br>
+❤️ Your Best Friend
+
+</div>
 
 </section>
 
 <footer>
-    Made with 💙 especially for you.
+Made with 💙 especially for you
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
 <script>
+
+/* TEXT TYPING */
+
+const text =
+"Every day, you heal others with kindness and love. Today is your day to smile, shine and be celebrated. 💙";
+
+let i = 0;
+
+function writeText(){
+
+    if(i < text.length){
+
+        document.getElementById("typing")
+        .innerHTML += text.charAt(i);
+
+        i++;
+
+        setTimeout(writeText,50);
+    }
+
+}
+
+writeText();
+
+
+/* HEARTS */
+
+setInterval(() => {
+
+    const heart =
+    document.createElement("div");
+
+    heart.classList.add("heart");
+
+    heart.innerHTML = "❤️";
+
+    heart.style.left =
+    Math.random()*100 + "vw";
+
+    heart.style.fontSize =
+    Math.random()*25 + 20 + "px";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    },6000);
+
+},700);
+
+
+/* COUNTDOWN */
+
+const birthday =
+new Date("June 25, 2026 00:00:00").getTime();
+
+setInterval(() => {
+
+    const now =
+    new Date().getTime();
+
+    const distance =
+    birthday - now;
+
+    const days =
+    Math.floor(distance /
+    (1000*60*60*24));
+
+    const hours =
+    Math.floor(
+    (distance %
+    (1000*60*60*24))
+    /(1000*60*60)
+    );
+
+    const minutes =
+    Math.floor(
+    (distance %
+    (1000*60*60))
+    /(1000*60)
+    );
+
+    document.getElementById(
+    "countdown").innerHTML =
+
+    "🎂 " +
+    days +
+    " Days • " +
+    hours +
+    " Hours • " +
+    minutes +
+    " Minutes";
+
+},1000);
+
+
+/* SURPRISE */
+
 function surprise(){
+
+    confetti({
+        particleCount:300,
+        spread:180,
+        origin:{y:0.6}
+    });
+
+    setTimeout(() => {
+
+        confetti({
+            particleCount:200,
+            spread:120
+        });
+
+    },500);
+
     alert(
-        "🎂 Prescription for Today\n\n" +
+        "🎂 Prescription For Today\n\n" +
         "💊 Eat lots of cake\n" +
         "💊 Smile all day long\n" +
         "💊 Receive unlimited hugs\n" +
         "💊 Enjoy being loved\n\n" +
-        "Happy Birthday, Beautiful Nurse 💙🩺"
+        "Happy Birthday Beautiful Nurse 💙🩺"
     );
+
 }
+
 </script>
 
 </body>
