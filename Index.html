@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Nurse 💙</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+
+body{
+    background:linear-gradient(to bottom,#eaf7ff,#ffffff);
+    color:#2c3e50;
+    text-align:center;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:25px;
+}
+
+.profile{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    object-fit:cover;
+    border:6px solid white;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+    margin-bottom:20px;
+}
+
+.heartbeat{
+    font-size:45px;
+    animation:beat 1s infinite;
+}
+
+@keyframes beat{
+    0%,100%{transform:scale(1);}
+    50%{transform:scale(1.2);}
+}
+
+h1{
+    color:#4a90e2;
+    margin:15px 0;
+    font-size:2rem;
+}
+
+p{
+    max-width:320px;
+    line-height:1.7;
+    color:#555;
+}
+
+button{
+    margin-top:30px;
+    padding:15px 30px;
+    border:none;
+    border-radius:40px;
+    background:#4a90e2;
+    color:white;
+    font-size:1rem;
+    cursor:pointer;
+    box-shadow:0 8px 20px rgba(74,144,226,0.3);
+}
+
+.cards{
+    padding:40px 20px;
+}
+
+.cards h2{
+    margin-bottom:25px;
+    color:#4a90e2;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    margin-bottom:15px;
+    border-radius:25px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.message{
+    padding:20px;
+}
+
+.box{
+    background:white;
+    padding:30px;
+    border-radius:25px;
+    margin:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+footer{
+    padding:40px;
+    color:#4a90e2;
+    font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+
+    <!-- Bddli photo.jpg b tswira dyalha -->
+    <img src="photo.jpg" class="profile">
+
+    <div class="heartbeat">🩺❤️</div>
+
+    <h1>Happy Birthday My Favorite Nurse 💙</h1>
+
+    <p>
+        Every day, you heal others with kindness and love.
+        Today is your day to smile, shine and be celebrated.
+    </p>
+
+    <button onclick="surprise()">
+        🎁 Open My Surprise
+    </button>
+
+</section>
+
+<section class="cards">
+
+    <h2>Why You're Amazing ✨</h2>
+
+    <div class="card">
+        🩺 Caring Heart <br><br>
+        You comfort people with love and kindness.
+    </div>
+
+    <div class="card">
+        💉 Strong Soul <br><br>
+        You remain strong even during difficult days.
+    </div>
+
+    <div class="card">
+        ❤️ Beautiful Person <br><br>
+        Your kindness heals hearts before medicine does.
+    </div>
+
+</section>
+
+<section class="message">
+
+    <div class="box">
+        💌<br><br>
+
+        May you always be my healer, my comfort,
+        and the beautiful soul that brightens every room.
+
+        <br><br>
+
+        Happy Birthday, my beautiful nurse. 💙🩺🎂
+    </div>
+
+</section>
+
+<footer>
+    Made with 💙 especially for you.
+</footer>
+
+<script>
+function surprise(){
+    alert(
+        "🎂 Prescription for Today\n\n" +
+        "💊 Eat lots of cake\n" +
+        "💊 Smile all day long\n" +
+        "💊 Receive unlimited hugs\n" +
+        "💊 Enjoy being loved\n\n" +
+        "Happy Birthday, Beautiful Nurse 💙🩺"
+    );
+}
+</script>
+
+</body>
+</html>
