@@ -214,9 +214,9 @@ Your kindness heals hearts before medicine does.
 
 <img src="Premier_photo.jpg">
 <img src="Photo_home.jpg">
-<img src="Photo_home_2.jpg">
 <img src="Photo_motor.jpg">
 <img src="Photo_plage.jpg">
+<img src="Photo_home_2.jpg">
 <img src="Photo_foot.jpg">
 
 </div>
@@ -320,7 +320,7 @@ setInterval(() => {
 /* COUNTDOWN */
 
 const birthday =
-new Date("June 25, 2026 00:00:00").getTime();
+new Date("June 26, 2026 00:00:00").getTime();
 
 setInterval(() => {
 
@@ -347,17 +347,15 @@ setInterval(() => {
     (1000*60*60))
     /(1000*60)
     );
+const seconds =
+Math.floor((distance % (1000 * 60)) / 1000);
 
-    document.getElementById(
-    "countdown").innerHTML =
-
-    "🎂 " +
-    days +
-    " Days • " +
-    hours +
-    " Hours • " +
-    minutes +
-    " Minutes";
+document.getElementById("countdown").innerHTML =
+"🎂 " +
+days + " Days • " +
+hours + " Hours • " +
+minutes + " Minutes • " +
+seconds + " Seconds";
 
 },1000);
 
